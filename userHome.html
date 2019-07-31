@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/4.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>DigiLearn</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+<style>
+
+.tt {
+	position: absolute;
+	right: 20px;
+}
+.t7 {
+	position: absolute;
+	left: 10px;
+}
+.t6 {
+	position: absolute;
+	right: 60px;
+	margin-top:5px;
+}
+.t1 {
+	font-size: 50px;
+}
+
+.t2 {
+	margin-left: 700px;
+	margin-top: 30px;
+}
+
+.card {
+	margin: 20px;
+	background-color:#f2c36d;
+	height:75px;
+}
+.navbar-right{
+margin-left:1500px;
+}
+
+
+
+body{
+ 	 background-image: url("<c:url value="/resources/theme1/images/logoi.jpg"/>");
+ 	 background-repeat:no-repeat;
+ 	 background-size:cover;
+	 height:1000px;
+	 width:700px;
+	}
+	.panel{
+	margin: 30px;
+  background-color: #ffffff;
+  border:1px solid orange;
+  /*border: 1px solid orange;*/
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+	}
+	label{
+	color:#a52e06;
+	}
+	input[type=text]{
+	color:#a52e06;
+	}
+	
+
+	h3{
+	color:green;
+	}
+	.main-button{
+	background-color:#ba3f82;
+	}
+
+</style>
+ 
+   
+<script>
+	$(document).ready(
+			function() {
+				$("#search").on(
+						"keyup",
+						function() {
+							var value = $(this).val().toLowerCase();
+							$(".card").filter(
+									function() {
+										$(this).toggle(
+												$(this).text().toLowerCase()
+														.indexOf(value) > -1)
+									});
+						});
+			});
+</script>
+
+</head>
+<body >
+
+<!-- Header -->
+		<header id="header" class="transparent-nav">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" >
+							<h3 style="color:orange"><b>CLearn</b></h3>
+						</a>
+						
+    	<a href="logout"><input class="main-button icon-button t6"  type="submit" value="Logout"></a>
+   
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+			</div>
+		</header>
+		<!-- /Header -->
+ <div class="container" align="center">       
+
+	
+      <br><br><br><div id="signupbox" style="margin-top:80px;width:1250px;" >
+                    <div class="panel"> 
+                    <div style="padding-top:30px" class="panel-body" >
+
+	
+	
+		<span class="row" ><h2 style="color:rgb(252, 109, 20);margin-left:50px;margin-top:25px;">Skills</h2> <input
+			class="form-control t2" id="search" type="text"
+			placeholder="Search.." style="height: 40px; width: 200px; border:1px solid orange;" /></span><a href=""><input class="main-button icon-button" style="margin-left:-600px;margin-top:-50px;" type="submit"  value="Completed Courses"></a>
+			<hr>
+
+
+			<div class="card">
+				<div class="card-body" >
+					<img src="" alt="logo" class="t7"
+						style="border-radius: 50%; width: 50px; height: 50px;"
+						class="mr-sm-4"><span style="color:black;font-size:25px;">Java</span><a href="#" ><input class="main-button icon-button tt" type="submit"  value="Start Learning"></a>
+						
+				</div>
+            </div>
+            
+            <div class="card">
+				<div class="card-body" >
+					<img src="" alt="logo" class="t7"
+						style="border-radius: 50%; width: 50px; height: 50px;"
+						class="mr-sm-4"><span style="color:black;font-size:25px;">Java FSD</span><a href="#" ><input class="main-button icon-button tt" type="submit"  value="Start Learning"></a>
+						
+				</div>
+            </div>
+            
+            <div class="card">
+				<div class="card-body" >
+					<img src="" alt="logo" class="t7"
+						style="border-radius: 50%; width: 50px; height: 50px;"
+						class="mr-sm-4"><span style="color:black;font-size:25px;">Angular4</span><a href="#" ><input class="main-button icon-button tt" type="submit"  value="Start Learning"></a>
+						
+				</div>
+            </div>
+            
+            <div class="card">
+				<div class="card-body" >
+					<img src="" alt="logo" class="t7"
+						style="border-radius: 50%; width: 50px; height: 50px;"
+						class="mr-sm-4"><span style="color:black;font-size:25px;">Angular6</span><a href="#" ><input class="main-button icon-button tt" type="submit"  value="Start Learning"></a>
+						
+				</div>
+			</div>
+	
+</div>
+</div>
+</div>
+
+		
+	</div>
+</body>
+</html>
