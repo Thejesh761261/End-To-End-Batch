@@ -7,7 +7,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/4.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
-<title>User Login</title>
+<title>Signup</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -23,6 +23,8 @@
 	.panel{
 	margin: 30px;
   background-color: #ffffff;
+  height:1000px;
+  width:450px;
   border:1px solid orange;
   /*border: 1px solid orange;*/
   opacity: 0.8;
@@ -36,9 +38,11 @@
 	}
 	.s1{
 	color:red;
-	margin-left:150px;
+	margin-left:10px;
 	}
-	
+	.si1{
+		margin-left:130px;
+	}
 </style>
 	
 </head>
@@ -68,7 +72,7 @@
                         <div class="panel-body">
                         <h3 style="color:orange;margin-left:130px;">Sign Up</h3>
                             <form id="signupform" class="form-horizontal" role="form" name="form1" action="insert" method="POST">
-                                    <p class="s1">All the fields are mandatory</p>
+                                    <p class="s1">*All the fields are mandatory</p>
                                 <div class="form-group">
                                     <label for="firstname" class="col-md-3 control-label">First
                                         Name</label>
@@ -139,15 +143,15 @@
                                     </div>
                                     
                                 </div>
-                                <div class="form-group">
-                                    <input type="checkbox" />
-                               <h6>     I agree the <a href="">terms and conditions</a></h6>
+                                <div class="form-group ml-sm-4">
+                                   <span class="inline"> <input type="checkbox"/>
+                               <h6 style="display:inline-block;"> I agree the <a href="">terms and conditions</a></h6></span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Button -->
-                                    <div class="col-md-offset-3 col-md-9">
+                                    <div class="col-md-9">
                                         <!--  <input type="submit" class="btn btn-warning" value="SignUp"/>-->
-                                        <input class="main-button icon-button" type="submit" value="SignUp">
+                                        <input class="btn btn-success si1 " type="submit" value="SignUp">
                                         <span style="margin-left: 8px;"></span>
                                     </div>
                                 </div>
