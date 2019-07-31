@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/4.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<title>User Login</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>CLearn</title>
+
+<style>	
+	body{
+ 	 background-image: url("<c:url value="/resources/theme1/images/home-background.jpg"/>");
+ 	 background-repeat:no-repeat;
+	 background-size: cover;
+	}
+	.panel{
+	margin: 30px;
+  background-color: #ffffff;
+  border:1px solid orange;
+  /*border: 1px solid orange;*/
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+	}
+	label{
+	color:#a52e06;
+	}
+	input[type=text]{
+	color:#a52e06;
+	}
+	.s1{
+	color:red;
+	margin-left:150px;
+	}
+	
+</style>
+	
+</head>
+<body >
+		<!-- Header -->
+		<header id="header" class="transparent-nav" style="background-color: rgb(38, 0, 255)">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+							<h3 style="color:orange"><b>CLearn</b></h3>
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<!-- /Header -->
+        <div class="container">
+            <div id="loginbox" style="margin-top: 50px;"
+                class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel  " >
+                    
+    
+                    <div style="padding-top: 30px" >
+    
+                        <div class="panel-body">
+                        <h3 style="color:orange;margin-left:130px;">Sign Up</h3>
+                            <form id="signupform" class="form-horizontal" role="form" name="form1" action="insert" method="POST">
+                                    <p class="s1">All the fields are mandatory</p>
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First
+                                        Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" onBlur="allLetter(document.form1.fn)" name="fn"
+                                            placeholder="First Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last
+                                        Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="ln" onBlur="allLetter(document.form1.ln)"
+                                            placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age" class="col-md-3 control-label">age</label>
+                                    <div class="col-md-9">
+                                        <input type="number" class="form-control" name="age" maxlength="2"
+                                            placeholder="age" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender" class="col-md-3 control-label">Gender</label>
+                                    <div class="col-md-9">
+                                        <select name="gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="number" class="col-md-3 control-label">Mobile No.
+                                        </label>
+                                    <div class="col-md-9">
+                                        <input type="number" class="form-control" name="contact" maxlength="10" minlength="10"
+                                            placeholder="Contact Number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="id" class="col-md-3 control-label">User ID</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="userid"
+                                            placeholder="User ID" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="email" class="form-control" name="mail"
+                                            placeholder="email Id" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="password"
+                                            placeholder="Password" required>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpassword" class="col-md-3 control-label">Confirn Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="cpassword"
+                                            placeholder="confirm Password" required>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" />
+                               <h6>     I agree the <a href="">terms and conditions</a></h6>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <!--  <input type="submit" class="btn btn-warning" value="SignUp"/>-->
+                                        <input class="main-button icon-button" type="submit" value="SignUp">
+                                        <span style="margin-left: 8px;"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+                
+         </div> 
+    </div>
+</body>
+</html>
